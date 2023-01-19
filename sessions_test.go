@@ -2,12 +2,12 @@ package abclientstate
 
 import (
 	"crypto/rand"
-	"github.com/p000ic/authboss-echo"
 	"net/http/httptest"
 	"testing"
 	"time"
 
 	"github.com/gorilla/sessions"
+	"github.com/p000ic/authboss-echo"
 )
 
 func TestExpiry(t *testing.T) {

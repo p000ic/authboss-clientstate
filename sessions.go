@@ -2,17 +2,17 @@ package abclientstate
 
 import (
 	"errors"
-	"github.com/p000ic/authboss-echo"
 	"net/http"
 	"strings"
 	"time"
 
 	"github.com/gorilla/securecookie"
 	"github.com/gorilla/sessions"
+	"github.com/p000ic/authboss-echo"
 )
 
 // SessionStorer stores sessions in a gorilla session store.
-// By default it's backed by cookies, but this can be overridden
+// By default, it's backed by cookies, but this can be overridden
 // by changing the underlying store manually or using the
 // appropriate constructor.
 type SessionStorer struct {

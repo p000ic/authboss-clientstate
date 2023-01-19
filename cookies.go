@@ -1,12 +1,12 @@
 package abclientstate
 
 import (
-	"github.com/p000ic/authboss-echo"
 	"net/http"
 	"time"
 
 	"github.com/friendsofgo/errors"
 	"github.com/gorilla/securecookie"
+	"github.com/p000ic/authboss-echo"
 )
 
 var (
@@ -102,7 +102,7 @@ func (c CookieStorer) ReadState(r *http.Request) (authboss.ClientState, error) {
 	return cs, nil
 }
 
-// WriteState to the responsewriter
+// WriteState to the response writer
 func (c CookieStorer) WriteState(w http.ResponseWriter, state authboss.ClientState, ev []authboss.ClientStateEvent) error {
 	for _, ev := range ev {
 		switch ev.Kind {
